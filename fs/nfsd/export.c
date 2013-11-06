@@ -428,7 +428,8 @@ fsloc_parse(char **mesg, char *buf, struct nfsd4_fs_locations *fsloc)
 	err = -EINVAL;
 	if (migrated < 0 || migrated > 1)
 		goto out_free_all;
-	fsloc->migrated = migrated;
+	// Where is this changing?
+        fsloc->migrated = migrated;
 	return 0;
 out_free_all:
 	nfsd4_fslocs_free(fsloc);
